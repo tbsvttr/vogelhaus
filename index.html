@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Mein kleines Vogelhaus</title>
+<link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+<div class="scene">
+  <header class="top">
+    <h1>
+      <span id="bird-name">Mein kleiner Vogel</span>
+      <span class="age-badge" id="age-badge">Ei</span>
+    </h1>
+    <div class="stats">
+      <div class="stat">
+        <div class="label"><span>🍓 Hunger</span><span id="hunger-val">100</span></div>
+        <div class="bar" id="hunger-bar"><div style="width:100%"></div></div>
+      </div>
+      <div class="stat">
+        <div class="label"><span>💛 Glück</span><span id="happy-val">100</span></div>
+        <div class="bar" id="happy-bar"><div style="width:100%"></div></div>
+      </div>
+      <div class="stat">
+        <div class="label"><span>💤 Energie</span><span id="energy-val">100</span></div>
+        <div class="bar" id="energy-bar"><div style="width:100%"></div></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="switcher" id="switcher"></div>
+
+  <main class="stage">
+    <div class="topbar">
+      <button id="sound-btn" aria-label="Ton an/aus" title="Ton an/aus">🔊</button>
+      <button id="info-btn" aria-label="Info" title="Info">i</button>
+    </div>
+
+    <div class="sky-layer" id="sky">
+      <div class="sun"></div>
+      <div class="moon"></div>
+      <div class="stars" id="stars"></div>
+    </div>
+
+    <div class="ground"></div>
+    <svg class="leaves left" width="120" height="80" viewBox="0 0 120 80">
+      <ellipse cx="40" cy="40" rx="40" ry="22" fill="#6fbf73"/>
+      <ellipse cx="70" cy="20" rx="28" ry="16" fill="#7fc783"/>
+      <ellipse cx="20" cy="22" rx="22" ry="14" fill="#7fc783"/>
+    </svg>
+    <svg class="leaves right" width="120" height="80" viewBox="0 0 120 80">
+      <ellipse cx="80" cy="40" rx="40" ry="22" fill="#6fbf73"/>
+      <ellipse cx="50" cy="20" rx="28" ry="16" fill="#7fc783"/>
+      <ellipse cx="100" cy="22" rx="22" ry="14" fill="#7fc783"/>
+    </svg>
+    <div class="branch"></div>
+
+    <div class="speech" id="speech"></div>
+
+    <div class="character" id="character">
+      <div class="sleep-z">z<small>z</small><sub>z</sub></div>
+      <svg id="bird-svg" viewBox="0 0 200 200"></svg>
+    </div>
+  </main>
+
+  <footer class="actions" id="actions"></footer>
+</div>
+
+<div class="modal" id="modal">
+  <div class="modal-card">
+    <h2>Hallo! 🌿</h2>
+    <p>Das hier ist dein <b>kleines Vogelhaus</b>. Du kannst bis zu 5 Vögel aufziehen — tippe oben auf die Vögelchen, um zwischen ihnen zu wechseln.</p>
+    <p><b>Während ein Vogel ein Ei ist:</b> Wärmen, sanft wiegen, lauschen.</p>
+    <p><b>Wenn er wach ist:</b> Füttern, Spielen, Schlafen-Schicken.</p>
+    <p><b>Wenn er schläft:</b> Streicheln oder leise Vorsingen.</p>
+    <p>Tippe auf den Vogel selbst, dann zwitschert er für dich. Mit dem <b>＋</b> oben legst du ein neues Ei ins Nest.</p>
+    <p>🌿 <b>Wildvögel kommen zu Besuch!</b> Tippe sie an, um sie ins Sammelbuch (📔) aufzunehmen — du hörst sie mit ihrer echten Stimme.</p>
+    <p style="opacity:0.7;font-size:12px">Alle Vögel wachsen in Echtzeit — auch wenn die Seite zu ist. 💛</p>
+    <button id="modal-close">Los geht's</button>
+  </div>
+</div>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
