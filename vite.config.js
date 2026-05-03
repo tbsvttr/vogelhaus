@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 
 // In dev keep base at "/" so localhost:5174/ works as before.
 // In production prefix everything with the repo name so GitHub Pages serves
-// it correctly at https://<user>.github.io/susanne-tamagotchi-furby-bird/.
+// it correctly at https://<user>.github.io/vogelhaus/.
 export default defineConfig(({ command }) => ({
-  base: command === "build" ? "/susanne-tamagotchi-furby-bird/" : "/",
+  base: command === "build" ? "/vogelhaus/" : "/",
 }));
