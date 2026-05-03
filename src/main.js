@@ -223,7 +223,7 @@
     if (!soundOn) return;
     let entry = speciesAudio.get(species.id);
     if (!entry) {
-      const a = new Audio(`/sounds/${species.id}.mp3`);
+      const a = new Audio(`${import.meta.env.BASE_URL}sounds/${species.id}.mp3`);
       a.preload = "auto";
       entry = { audio: a, failed: false };
       a.addEventListener("error", () => { entry.failed = true; }, { once: true });
