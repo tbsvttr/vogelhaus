@@ -1,0 +1,53 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#d8efff"/>
+      <stop offset="55%" stop-color="#ffeacb"/>
+      <stop offset="100%" stop-color="#ffd9b8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- full-bleed background, so this same icon also works as a maskable icon -->
+  <rect width="512" height="512" fill="url(#sky)"/>
+
+  <!-- soft sun glow -->
+  <circle cx="420" cy="100" r="60" fill="#ffd76a" opacity="0.55"/>
+  <circle cx="420" cy="100" r="38" fill="#fff7c4"/>
+
+  <!-- ground hint -->
+  <ellipse cx="256" cy="560" rx="400" ry="170" fill="#6fbf73"/>
+  <ellipse cx="256" cy="540" rx="380" ry="100" fill="#8ed192" opacity="0.6"/>
+
+  <!-- robin centered, kept inside the maskable safe circle -->
+  <g transform="translate(116, 116)">
+    <!-- shadow -->
+    <ellipse cx="140" cy="252" rx="80" ry="14" fill="rgba(0,0,0,0.2)"/>
+    <!-- body -->
+    <ellipse cx="140" cy="170" rx="82" ry="74" fill="#a85a3a"/>
+    <!-- belly -->
+    <ellipse cx="140" cy="184" rx="50" ry="56" fill="#f4d3a2"/>
+    <!-- red robin chest -->
+    <ellipse cx="128" cy="158" rx="32" ry="30" fill="#e85a3a" opacity="0.95"/>
+    <!-- tail -->
+    <ellipse cx="214" cy="155" rx="34" ry="14" fill="#a85a3a"/>
+    <path d="M 234 150 L 256 144 L 240 162 Z" fill="#a85a3a" opacity="0.85"/>
+    <!-- head -->
+    <circle cx="140" cy="106" r="58" fill="#a85a3a"/>
+    <!-- eyes -->
+    <circle cx="128" cy="100" r="6.5" fill="#222"/>
+    <circle cx="129.5" cy="98.5" r="2" fill="#fff"/>
+    <circle cx="152" cy="100" r="6.5" fill="#222"/>
+    <circle cx="153.5" cy="98.5" r="2" fill="#fff"/>
+    <!-- cheek blush -->
+    <ellipse cx="120" cy="118" rx="10" ry="5" fill="#f4a8a8" opacity="0.5"/>
+    <ellipse cx="160" cy="118" rx="10" ry="5" fill="#f4a8a8" opacity="0.5"/>
+    <!-- beak -->
+    <polygon points="166,108 204,116 166,124" fill="#e8a44a" stroke="#b87a2a" stroke-width="1.5"/>
+    <!-- wing -->
+    <ellipse cx="98" cy="170" rx="32" ry="46" fill="#a85a3a"/>
+    <ellipse cx="92" cy="162" rx="20" ry="30" fill="#e85a3a" opacity="0.5"/>
+    <!-- legs -->
+    <line x1="124" y1="240" x2="124" y2="262" stroke="#e8a44a" stroke-width="6" stroke-linecap="round"/>
+    <line x1="156" y1="240" x2="156" y2="262" stroke="#e8a44a" stroke-width="6" stroke-linecap="round"/>
+  </g>
+</svg>
