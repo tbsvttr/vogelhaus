@@ -494,13 +494,19 @@
       if (ok !== true) { chirpSpeech(typeof ok === "string" ? ok : "…"); return; }
     }
     if (def.apply) def.apply(b);
+    vibrate(15);
     persist();
     render();
     runFeedback(def.feedback ? def.feedback(b) : null, b);
   }
   function runTap() {
     const b = active();
+    vibrate(20);
     runFeedback(TAP_FEEDBACK[phaseOf(b)](b), b);
+  }
+  // Subtle haptic feedback on supported devices (mostly Android). No-op on iOS.
+  function vibrate(pattern) {
+    if (navigator.vibrate) try { navigator.vibrate(pattern); } catch {}
   }
 
   // ============================== LIFECYCLE =================================
@@ -958,8 +964,10 @@
       chirpSpeech(`Neu entdeckt: ${sp.name}! ✨`);
       SOUNDS.sparkle();
       spawnFloaters("✨", 5);
+      vibrate([60, 40, 60]);
     } else {
       chirpSpeech(sp.name);
+      vibrate(25);
     }
     playSpeciesSong(sp, true);
     showSpeciesCard(sp);
